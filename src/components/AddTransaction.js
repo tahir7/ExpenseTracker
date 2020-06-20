@@ -1,5 +1,8 @@
 import React, {useState, useContext} from 'react';
-import {GlobalContext} from '../context/GlobalState'
+import {GlobalContext} from '../context/GlobalState';
+//a simple library for generating unique ids.
+// v1 funcition of the library has been imported here u/ alias uuid to simplify things
+import { v1 as uuid } from "uuid";
 
 
 export const AddTransaction = () => {
@@ -8,12 +11,12 @@ export const AddTransaction = () => {
 
     const {addTransaction } = useContext(GlobalContext); 
 
-    const onSubmit = e => {
-        e.preventDefault();
+    const onSubmit = event => {
+        event.preventDefault();
 
             
       const newTransaction = {
-        id: Math.floor(Math.random() * 10000),
+        id: uuid(),
         text,
         amount: +amount
         }
@@ -33,7 +36,7 @@ export const AddTransaction = () => {
             <form onSubmit = {onSubmit}>
                 <div className="form-control">
                     <label htmlFor="text">Title (can't be blank)</label>
-                    <input type="text" value={text} onChange={(e) => setText(e.target.value)} 
+                    <input type="text" value={text} onChange={(event) => setText(event.target.value)} 
                     placeholder="Enter text"/> 
                 </div>
 
