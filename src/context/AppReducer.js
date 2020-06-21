@@ -1,7 +1,7 @@
 // import React, {useContext} from 'react'
 // import {GlobalContext} from '../context/GlobalState'
 
-import React from 'react'
+// import React from 'react'
 
 
 export default (state, action)  => {
