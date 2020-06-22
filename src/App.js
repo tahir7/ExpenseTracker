@@ -7,19 +7,25 @@ import {TransactionList} from './components/TransactionList'
 import {AddTransaction} from './components/AddTransaction'
 import {GlobalProvider} from './context/GlobalState'
 
-
-
 function App() {
   return (
     <GlobalProvider>
         <Header/>
 
-      <div className="container">
+<div className="main-col">
+      {/* <div className="container"> */}
             <Balance/>
            <IncomeExpense/>
-            <TransactionList/>
+           
             <AddTransaction/>
+      {/* </div> */}
       </div>
+
+  <div className="side-col">
+    
+      <TransactionList/>
+     
+      </div>   
     </GlobalProvider>
   );
 }

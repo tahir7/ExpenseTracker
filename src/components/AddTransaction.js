@@ -35,14 +35,14 @@ export const AddTransaction = () => {
         <div>
             <form onSubmit = {onSubmit}>
                 <div className="form-control">
-                    <label htmlFor="text">Title (can't be blank)</label>
+                    <label htmlFor="text">Title <label className="label-color"> - can't be blank</label></label>
                     <input type="text" value={text} onChange={(event) => setText(event.target.value)} 
                     placeholder="Enter text"/> 
                 </div>
 
                 <div className="form-control">
 
-                    <label htmlFor="amount">Amount <br/> (negative - Expense, positive - Income)</label>
+                    <label htmlFor="amount">Amount  <label className="label-color">- negative - Expense, positive - Income</label></label>
                     <input type="number" value={amount} onChange={(e) => setAmount(e.target.value)} 
                     placeholder="Enter Amount" />
                 </div>

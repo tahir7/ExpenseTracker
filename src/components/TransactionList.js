@@ -10,6 +10,7 @@ export const TransactionList = () => {
     return (
         <>
             <h4>History</h4>
+            <h4>&nbsp;</h4>
             <ul className="list">
                { transactions.map(transaction => (< Transaction transaction={transaction}/>)) }
               
